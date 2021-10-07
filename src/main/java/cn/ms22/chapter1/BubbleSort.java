@@ -2,8 +2,6 @@ package cn.ms22.chapter1;
 
 import cn.ms22.utils.CommonUtil;
 
-import java.util.Collections;
-
 public class BubbleSort {
 
     public static void main(String[] args) {
@@ -38,6 +36,4 @@ public class BubbleSort {
             }
         }
     }
-
-
 }

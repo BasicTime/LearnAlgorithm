@@ -16,7 +16,7 @@ public final class CommonUtil {
         for (int i : arr) {
             System.out.print(i + "\t");
         }
-        System.out.println("");
+        System.out.print("\n");
     }
 
     public static void print(int[] arr, String prefix) {
@@ -63,6 +63,12 @@ public final class CommonUtil {
         int tmp = arr[idxa];
         arr[idxa] = arr[idxb];
         arr[idxb] = tmp;
+    }
+
+    public static void swap1(int[] arr, int idxa, int idxb) {
+        arr[idxa] = arr[idxa]^arr[idxb];
+        arr[idxb] = arr[idxa]^arr[idxb];
+        arr[idxa] = arr[idxa]^arr[idxb];
     }
 
     private static void comparator1(int[] original, int[] last) {
