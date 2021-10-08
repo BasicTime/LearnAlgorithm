@@ -3,11 +3,9 @@ package cn.ms22;
 import cn.ms22.utils.CommonUtil;
 
 public abstract class BaseSort {
-    private final int size = 10;
+    private final int size = 50;
 
-    public BaseSort sort(int[] arr) {
-        return null;
-    }
+    public abstract BaseSort sort(int[] arr);
 
     public BaseSort print(int[] arr) {
         CommonUtil.print(arr);
