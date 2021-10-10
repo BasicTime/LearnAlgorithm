@@ -2,10 +2,7 @@ package cn.ms22.utils;
 
 import cn.ms22.exception.SortException;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 
 
 public final class CommonUtil {
@@ -24,10 +21,22 @@ public final class CommonUtil {
         print(arr);
     }
 
+    public static <T> void print(T[] arr) {
+        for (T t : arr) {
+            System.out.println(t.toString());
+        }
+    }
+
+    public static <T> void print(T[] arr, String pre) {
+        System.out.print(pre + "\n");
+        print(arr);
+    }
+
+
     public static int[] arrGenerator(int size) {
         int[] arr = new int[size];
         for (int i = 0; i < size; i++) {
-            arr[i] = (int) ((Math.random() * 100)-(Math.random() * 100));
+            arr[i] = (int) ((Math.random() * 100) - (Math.random() * 100));
         }
         return arr;
     }
@@ -35,21 +44,21 @@ public final class CommonUtil {
     public static void comparator(int[] original, int[] last, Order... order) {
         if (order.length == 0) {
             Arrays.sort(original);
-            comparator1(original,last);
+            comparator1(original, last);
         } else {
             switch (order[0]) {
                 case ASC: {
                     Arrays.sort(original);
-                    comparator1(original,last);
+                    comparator1(original, last);
                 }
                 break;
                 case DESC: {
                     Arrays.sort(original);
                     int[] clone = original.clone();
                     for (int i = 0; i < clone.length; i++) {
-                        original[i] = clone[clone.length-1-i];
+                        original[i] = clone[clone.length - 1 - i];
                     }
-                    comparator1(original,last);
+                    comparator1(original, last);
                 }
                 break;
                 default:
@@ -66,9 +75,9 @@ public final class CommonUtil {
     }
 
     public static void swap1(int[] arr, int idxa, int idxb) {
-        arr[idxa] = arr[idxa]^arr[idxb];
-        arr[idxb] = arr[idxa]^arr[idxb];
-        arr[idxa] = arr[idxa]^arr[idxb];
+        arr[idxa] = arr[idxa] ^ arr[idxb];
+        arr[idxb] = arr[idxa] ^ arr[idxb];
+        arr[idxa] = arr[idxa] ^ arr[idxb];
     }
 
     private static void comparator1(int[] original, int[] last) {
