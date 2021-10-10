@@ -34,11 +34,34 @@ public final class CommonUtil {
 
 
     public static int[] arrGenerator(int size) {
+        return arrGenerator(size, 100);
+    }
+
+    /**
+     *
+     * @param size arr.length
+     * @param lSection 左区间
+     * @param rSection 右边区间
+     * @return [lSection,rSection]
+     */
+    public static int[] arrGenerator(int size, int lSection, int rSection) {
+        if (rSection <= 0) {
+            rSection = 100;
+        }
+        if (lSection >= rSection) {
+            rSection = 100;
+            lSection = 0;
+        }
         int[] arr = new int[size];
         for (int i = 0; i < size; i++) {
-            arr[i] = (int) ((Math.random() * 100) - (Math.random() * 100));
+            arr[i] = lSection + (int) (Math.random() * (rSection - lSection + 1));
         }
         return arr;
+    }
+
+
+    public static int[] arrGenerator(int size, int section) {
+        return arrGenerator(size, -section, section);
     }
 
     public static void comparator(int[] original, int[] last, Order... order) {

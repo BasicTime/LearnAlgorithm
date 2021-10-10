@@ -8,10 +8,8 @@ import cn.ms22.utils.CommonUtil;
  */
 public class QuickSort extends BaseSort {
     public static void main(String[] args) {
-        /*int[] arr = CommonUtil.arrGenerator(10);
-        CommonUtil.print(arr);
-        sort(arr);
-        CommonUtil.print(arr);*/
+        int[] arr = CommonUtil.arrGenerator(10,-10,10);
+//        new QuickSort().print(arr).sort(arr).print(arr,"end");
         new QuickSort().compare(100000, CommonUtil.Order.ASC);
     }
 
