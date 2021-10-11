@@ -4,6 +4,7 @@ import cn.ms22.BaseSort;
 import cn.ms22.utils.CommonUtil;
 
 /**
+ * 桶排序中的计数排序
  * 目前只能处理正整数范围内的数
  * 基于非比较性质的排序
  * 要求是，排序数组arr，arr[]是存放 0-60的N长度的数组，时间复杂度O(N),额外空间复杂的O(N)

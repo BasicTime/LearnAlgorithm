@@ -22,8 +22,11 @@ public final class CommonUtil {
     }
 
     public static <T> void print(T[] arr) {
-        for (T t : arr) {
-            System.out.println(t.toString());
+        for (int i = 0; i < arr.length; i++) {
+            T t = arr[i];
+            if (t != null) {
+                System.out.println("Index:" + i + t.toString());
+            }
         }
     }
 
@@ -38,11 +41,10 @@ public final class CommonUtil {
     }
 
     /**
-     *
-     * @param size arr.length
+     * @param size     arr.length
      * @param lSection 左区间
      * @param rSection 右边区间
-     * @return [lSection,rSection]
+     * @return [lSection, rSection]
      */
     public static int[] arrGenerator(int size, int lSection, int rSection) {
         if (rSection <= 0) {
