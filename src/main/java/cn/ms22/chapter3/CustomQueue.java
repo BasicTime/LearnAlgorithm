@@ -33,9 +33,13 @@ public class CustomQueue<T> {
         return size;
     }
 
+    public T peek() {
+        return arr[queueHead];
+    }
+
     public T poll() {
         if (size == 0) {
-            throw new NullPointerException("队列为空。");
+            throw new RuntimeException("队列为空。");
         }
         T t;
         if (queueHead == arr.length - 1) {
