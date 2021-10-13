@@ -92,11 +92,16 @@ public final class CommonUtil {
         }
     }
 
-
     public static void swap(int[] arr, int idxa, int idxb) {
         int tmp = arr[idxa];
         arr[idxa] = arr[idxb];
         arr[idxb] = tmp;
+    }
+
+    public static <T> void swap(T[] arr, int idxL, int idxR) {
+        T t = arr[idxL];
+        arr[idxL] = arr[idxR];
+        arr[idxR] = t;
     }
 
     public static void swap1(int[] arr, int idxa, int idxb) {

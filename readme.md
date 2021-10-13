@@ -9,6 +9,7 @@
     arr[idx1] = arr[idx1]^arr[idx2];  
   }
 > 3. if...else... 都可以改为三目运算符 
+> 4. 去[n,m]的随机正整数n<m,(int(Math.random()*(m-n+1))+n)
 
 
 
@@ -294,5 +295,23 @@ heapIfy 比较的时候，需要先比较left 和 right 的大小得出largest�
 >1. 队列具有add、pull、peek方法，FIFO属性
 >2. 栈具有push、pop、peek操作
 
+## 第四章
+### 20.猫狗队列
+> 猫、狗进入pet队列，实现方法getCatFirst，getDogFirst,getAllFirst,getAll,catIsEmpty,dogIsEmpty  
+> 快排中的partition后，边界问题  
+> 如果全部用数组实现，会比较繁琐，如果用已经实现好的队列来实现就很方便，如：在pullAll的时候，只需要
+>在两个队列peek一下比较id就可以了  
 
+### 21.转圈打印矩阵arr[4][4]
+ 1  2  3  4  
+ 5  6  7  8  
+ 9 10 11 12  
+13 14 15 16  
+出来的结果是 1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10  
+思路：  
+1. 从左往右
+2. 从上往下  
+3. 从右往左
+4. 从下往上
+5. 控制好左右边界和上下边界
   
