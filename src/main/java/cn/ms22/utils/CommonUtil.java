@@ -30,6 +30,24 @@ public final class CommonUtil {
         }
     }
 
+    /**
+     * 传入的T不能是基础类型，需要转换为包装类型
+     * 在泛型使用限制条件中有一条是：法使用原始类型实例化泛型类型
+     * @param arr
+     * @param <T>
+     */
+    public static <T> void print(T[][] arr) {
+        for (T[] t : arr) {
+            for (T value : t) {
+                System.out.print(value.toString() + "\t");
+            }
+            System.out.println();
+        }
+    }
+    public static <T> void print(T[][] arr,String pre) {
+        System.out.println(pre);
+        print(arr);
+    }
     public static <T> void print(T[] arr, String pre) {
         System.out.print(pre + "\n");
         print(arr);
